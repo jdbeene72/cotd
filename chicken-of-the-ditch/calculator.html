@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Simple HTML Calculation form</title>
+  	<meta charset="utf-8">                                                                                    
+  	<meta name="description" content="Crawfish Calculator" />           
+  	<meta name="author" content="JD Beene" />                                                                
+ 	  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/style-calc.css" type="text/css" />
+</head>
+
+<body>
+  <title>Sum Input Form Value</title>
+    <form>
+      <fieldset>
+        <legend>Shopping Cart</legend>
+        <div class="form-group">
+          <label>People: </label>
+          <input type="number" id="numPeople" name="numPeople" class="form-control prc" />
+          <input type="btn" name="btnSubmit" value="Submit" onclick="Calculate()" />
+        </div>
+        <div class="form-group">
+          <label>Crawfish: </label>
+          <output id="resultCraw"></output>
+          <label>Potatos: </label>
+          <output id="resultPotw"></output>
+          <label>Corn: </label>
+          <output id="resultCorn"></output>
+          <label>Mushrooms: </label>
+          <output id="resultMush"></output>
+          </div>
+      </fieldset>
+    </form>
+    
+    
+    <script>
+    
+    function Calculate() {
+    var people = document.getElementById("numPeople").value;
+    var crawfish = 3;
+    var potato = 1;
+    var corn = 1.5;
+    var mushroom = 2;
+    var resultCraw = parseInt(people) * parseInt(crawfish);
+    var resultPotw = parseInt(people) * parseInt(potato);
+    var resultCorn = parseInt(people) * parseInt(corn);
+    var resultMush = parseInt(people) * parseInt(mushroom); 
+    }
+    
+    /*
+    $('.form-group').on('input','.prc',function(){
+  var totalSum = 0;
+  $('.form-group .prc').each(function) {
+    var inputVal = $(this).val();
+    if($.isNumeric(inputVal)) {
+      totalSum += parseFloat(inputVal);
+    }
+  });
+  $('#result').val(totalSum);
+}); 
+</script> 
+  
+   <!-- <script src="assets/js/calculate.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background: #D9D9D9;
+  color: #555555;
+  font-size: 14px;
+  padding: 2em;
+}
+/*
+img {
+  display: block;
+  max-width:100%;
+  height:auto;
+}
+
+/*---------------- HOVER SHADOW ------------------------*/
+/*
+.wrapper {
+  width: 100%;
+  margin: 20px auto;
+}
+  
+
+.cards-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.cards-wrap .card-item {
+  max-width: 30em;
+  padding: .7em;
+  margin-bottom: 1.4rem;
+  transition: .5s;
+  background: #D9D9D9;
+  border: 1px solid #32353B;
+  border-radius:5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,.4);
+}
+
+/* HERE */
+/*
+.cards-wrap .card-item a {
+  text-decoration:none;
+}
+
+.cards-wrap .card-item a:link,.cards-wrap .card-item a:visited { 
+  color:#3b638b;
+}
+
+.cards-wrap .card-item figure{
+  margin:0;
+}
+
+.cards-wrap .card-item img {
+    border-radius: 10px;
+}
+
+.cards-wrap .card-item:hover{
+  box-shadow: 0 8px 16px rgba(0,0,0,.4);
+}
+
+.cards-wrap .card_inner {
+  
+}
+
+.cards-wrap .card-top {
+  width: 100%;
+  min-height: 225px;
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.cards-wrap .card-bottom {
+  padding: 15px;
+}
+
+.cards-wrap .card-bottom .card-category {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.cards-wrap .card-bottom .card-info {
+  padding: 15px;
+  margin: 10px 0;
+  border: 0.5px solid #32353B;
+}
+
+.cards-wrap .card-bottom .card-info .title {
+  color: #820200;
+  font-size: .8rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.cards-wrap .card-bottom .card-creator {
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .cards-wrap .card-item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-wrap .card-item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 528px) {
+  .cards-wrap .card-top {
+    height: auto;
+  }
+  .cards-wrap .card-item {
+    width: 100%;
+  }
+}
+*/
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.demo {
+  width: 80%;
+  margin: auto;
+}
+
+.img {
+  object-fit: cover;
+  width: 320px;
+  height: 180px;
+  background: red;
+  margin: 2px;
+  
+  &:nth-child(even) {
+    object-fit: contain;
+  }
+}
