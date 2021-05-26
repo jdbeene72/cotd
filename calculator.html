@@ -1,65 +1,86 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Simple HTML Calculation form</title>
+    <title>Crawfish Calculator</title>
   	<meta charset="utf-8">                                                                                    
   	<meta name="description" content="Crawfish Calculator" />           
   	<meta name="author" content="JD Beene" />                                                                
  	  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="assets/css/style-calc.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 </head>
 
 <body>
-  <title>Sum Input Form Value</title>
-    <form>
-      <fieldset>
-        <legend>Shopping Cart</legend>
-        <div class="form-group">
-          <label>People: </label>
-          <input type="number" id="numPeople" name="numPeople" class="form-control prc" />
-          <input type="btn" name="btnSubmit" value="Submit" onclick="Calculate()" />
-        </div>
-        <div class="form-group">
-          <label>Crawfish: </label>
-          <output id="resultCraw"></output>
-          <label>Potatos: </label>
-          <output id="resultPotw"></output>
-          <label>Corn: </label>
-          <output id="resultCorn"></output>
-          <label>Mushrooms: </label>
-          <output id="resultMush"></output>
-          </div>
-      </fieldset>
-    </form>
-    
-    
-    <script>
-    
-    function Calculate() {
-    var people = document.getElementById("numPeople").value;
-    var crawfish = 3;
-    var potato = 1;
-    var corn = 1.5;
-    var mushroom = 2;
-    var resultCraw = parseInt(people) * parseInt(crawfish);
-    var resultPotw = parseInt(people) * parseInt(potato);
-    var resultCorn = parseInt(people) * parseInt(corn);
-    var resultMush = parseInt(people) * parseInt(mushroom); 
-    }
-    
-    /*
-    $('.form-group').on('input','.prc',function(){
-  var totalSum = 0;
-  $('.form-group .prc').each(function) {
-    var inputVal = $(this).val();
-    if($.isNumeric(inputVal)) {
-      totalSum += parseFloat(inputVal);
-    }
-  });
-  $('#result').val(totalSum);
-}); 
-</script> 
   
-   <!-- <script src="assets/js/calculate.js"></script> -->
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Launch Crawfish Calculator</button>
+
+<!-- The Modal -->
+  <div id="myModal" class="modal">
+   <!-- Modal content -->
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Crawfish Calculator</h2>
+      </div>
+      
+      <div class="modal-body">
+        
+        <div class="modal-group">
+          <tr>
+            <td><label>Number of Guests</label></td>
+            <td>
+              <input name="numguest" id="numguest" type="number" />
+              <!-- <input hidden name="crawqty" id="crawqty" type="hidden" value="3" /> -->
+            </td>
+          </tr>
+        </div>
+
+        <div class="modal-group">
+          <tr>
+            <td><label>Crawfish: </label></td>
+            <td><input name="totalCraw" id="totalCraw" type="text" /></td>
+          </tr>
+        </div>
+        
+        <div class="modal-group">
+          <tr>
+            <td><label>Sausage: </label></td>
+            <td><input name="totalSausage" id="totalSausage" type="text" /></td>
+          </tr>
+        </div>
+        
+        <div class="modal-group">
+          <tr>
+            <td><label>Potatos: </label></td>
+            <td><input name="totalPot" id="totalPot" type="text" /></td>
+          </tr>
+        </div>
+        
+        <div class="modal-group">
+          <tr>
+            <td><label>Corn: </label></td>
+            <td><input name="totalCorn" id="totalCorn" type="text" /></td>
+          </tr>
+        </div>
+        
+        <div class="modal-group">
+          <tr>
+            <td><label>Mushrooms: </label></td>
+            <td><input name="totalMush" id="totalMush" type="text" /></td>
+          </tr>
+        </div>
+        
+        <div class="modal-footer">
+          <h3>Modal Footer</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="assets/js/calculate.js"></script>
+
 </body>
 </html>
