@@ -8,8 +8,10 @@
   	<meta name="keywords" content="Crawfish boil, Crawfish equipment, Crawfish seasonings" />  
  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+  	<link rel="stylesheet" href="assets/css/calc.css" type="text/css" />
   	<script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
  
 <body class="homepage is-preload">
@@ -22,29 +24,27 @@
 				<h1>Chicken of the Ditch</h1>
 				<p>Simplifying & demystifying the crawfish boiling process</p>
 			</div>
-			
+
 		<!-- Header Top Nav Bar BEGIN -->	
 
 			<nav id="nav">
 				<ul>
-					<li class="current"><a href="index.html">Home</a></li>
 					<li><a href="#getStarted">Getting Started</a></li>
+					<li><a href="#modalPopup" id="modalLink1">Crawfish Calculator</a></li>
 					<li><a href="#traditional">Traditional Boil</a></li>
 					<li><a href="#steaming">Steaming</a></li>
-					<li><a href="#lessons">Lessons Learned</a></li>
-					<li><a href="#contact">Contact</a></li>
 					
 				<!-- Header Top Nav Bar Sub Menu BEGIN -->
 					
-				<!-- <li><a href="#">Resources</a>
+					<li><a href="#">Resources</a>
 						<ul>
-							<li><a href="#">Crawfish Calculator</a></li>
 							<li><a href="#equipment">Equipment</a></li>
 							<li><a href="#ingredients">Ingredients</a></li>
 							<li><a href="#vendors">Live Crawfish Vendors</a></li>
 							<li><a href="#lessons">Lessons Learned</a></li>
+							<li><a href="#contact">Contact</a></li>
 						</ul>
-					</li> -->
+					</li>
 					
 				<!-- Header Top Nav Bar Sub Menu END -->
 
@@ -105,7 +105,7 @@
 							<h3><a href="#">Crawfish Boil Calculator</a></h3>
 							<p>Tool for estimating how much of the "stuff" you'll need for the perfect boil.</p>
 							<ul class="actions">
-								<li><a href="#" class="button style1">Launch</a></li>
+								<li><a href="#modalPopup" class="button style1" id="modalLink3">Launch</a></li>
 							</ul>
 						</section>
 					</div>
@@ -138,7 +138,7 @@
 						everything but the water from the pot and mark the water fill line on a paddle 
 						or on the inside of the pot. Marking both is always a good idea.</p>
 							<dl>
-								<dd>STEP 1: WASH/PURGE THE CRAWFISH</dd>
+								<dt>STEP 1: WASH/PURGE THE CRAWFISH</dt>
 							</dl>
 							<dl>
     							<dt>Dry Ingredients:</dt>
@@ -255,7 +255,7 @@
 						definitely want to puree your onions and celery. Also needed is a thermometer.</p>
 						
 						<dl>
-							<dd>STEP 1: WASH/PURGE THE CRAWFISH</dd>
+							<dt>STEP 1: WASH/PURGE THE CRAWFISH</dt>
 						</dl>
 							<dl>
     							<dt>Dry Ingredients:</dt>
@@ -351,7 +351,8 @@
 									<dd>Place the crawfish in the pot</dd>
 									<dd>Put lid on pot</dd>
 									<dd>Leave burner on HIGH</dd>
-							</dl>	
+							</dl>
+							<dl>
 									<dt>Once a foam covers all of the crawfish: </dt>
 										<dd>Let the crawfish continue to steam for 4-1/2 minutes</dd>
 							</dl>
@@ -365,7 +366,6 @@
 							</dl>
 							<dl>
 								<dt>Repeat the steaming process as needed for up to 200lbs of crawfish</dt>
-							</dl>
 							</dl>
 					</article>
 				</div>
@@ -589,10 +589,76 @@
 		</section>
 		
 	<!-- Footer END -->
+
+		<div class="modal-footer">
+			<div class="modal-center">
+  				<button id="btnClose">Close</button>
+			</div>
+		</div>
+		
+	<!-- Modal Calculator END -->
 	
 <!-- Page Wrapper END-->
-	</div>	
+
+	</div>
+
+	<!-- Modal Calculator BEGIN -->
+  	<div id="modalPopup" class="modal">
+	   <!-- Modal content -->
+	    <div class="modal-content">
+	      
+			<div class="modal-header">
+		        <span class="close">&times;</span>
+				<h2>Crawfish Calculator</h2>
+			</div>
+	      
+			<div class="modal-body">
+		      	<table>
+			    	<tr>    
+			    		<td class="row-label"><label>Men:</label></td>
+			            <td class="row-input"><input name="nummen" id="nummen" type="number" /></td>
+			          </tr>
 	
+			          <tr>
+			            <td class="row-label"><label>Women/Children:</label></td>
+			            <td class="row-input"><input name="numother" id="numother" type="number" /></td>
+			          </tr>
+	
+			          <tr>
+			            <td class="row-label"><label>Crawfish: </label></td>
+			            <td class="row-total"><input name="totalCraw" id="totalCraw" type="text" /></td>
+			            <td class="row-units">lbs</td>
+			          </tr>
+	
+			          <tr>
+			            <td class="row-label"><label>Sausage: </label></td>
+			            <td class="row-total"><input name="totalSausage" id="totalSausage" type="text" /></td>
+			            <td class="row-units">lbs</td>
+			          </tr>
+	
+			          <tr>
+			            <td class="row-label"><label>Potatos: </label></td>
+			            <td class="row-total"><input name="totalPot" id="totalPot" type="text" /></td>
+			            <td class="row-units">lbs</td>
+			          </tr>
+	
+			          <tr>
+			            <td class="row-label"><label>Corn: </label></td>
+			            <td class="row-total"><input name="totalCorn" id="totalCorn" type="text" /></td>
+			            <td class="row-units">ea</td>
+			          </tr>
+	
+			          <tr>
+			            <td class="row-label"><label>Mushrooms: </label></td>
+			            <td class="row-total"><input name="totalMush" id="totalMush" type="text" /></td>
+			            <td class="row-units">oz</td>
+			          </tr>
+				</table>
+			</div> <!-- Modal Body -->
+		</div> <!-- Modal Content -->
+	</div> <!-- Modal Calculator -->
+
+
 <!-- JavaScript BEGIN -->	
 
 	<script src="assets/js/jquery.min.js"></script>

@@ -2555,6 +2555,9 @@ margin-left: 2em;
     }
 
 /* Tablet Landscape */
+#nav > ul > li > a, #nav > ul > li > span {
+    letter-spacing: 0.06em;
+}
 
 #intro {
 padding-bottom: 7em;
@@ -2907,7 +2910,7 @@ margin-top: 4em;
     }
     
     ul.actions li {
-        margin: 15px 0 0 0;
+        margin: 15px 0 0 0;    
         display: block;
     }
     
@@ -3067,19 +3070,4 @@ margin-top: 4em;
         margin-top: 0;
     }
 
-}
-
-.row-heading {
-    font-size:1.3rem;
-    font-weight:bold;
-}
-
-.total {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.total-val {
-    -size:2rem;
-    border: #000 solid 1px;
 }
