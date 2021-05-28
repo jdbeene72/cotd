@@ -8,10 +8,11 @@
   	<meta name="keywords" content="Crawfish boil, Crawfish equipment, Crawfish seasonings" />  
  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-  	<link rel="stylesheet" href="assets/css/calc.css" type="text/css" />
+  	<!-- <link rel="stylesheet" href="assets/css/calc.css" type="text/css" /> -->
   	<script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
   	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	
   </head>
  
 <body class="homepage is-preload">
@@ -30,9 +31,9 @@
 			<nav id="nav">
 				<ul>
 					<li><a href="#getStarted">Getting Started</a></li>
-					<li><a href="#modalPopup" id="modalLink1">Crawfish Calculator</a></li>
 					<li><a href="#traditional">Traditional Boil</a></li>
 					<li><a href="#steaming">Steaming</a></li>
+					<li><a href="#calculator">Crawfish Calculator</a></li>
 					
 				<!-- Header Top Nav Bar Sub Menu BEGIN -->
 					
@@ -105,7 +106,7 @@
 							<h3><a href="#">Crawfish Boil Calculator</a></h3>
 							<p>Tool for estimating how much of the "stuff" you'll need for the perfect boil.</p>
 							<ul class="actions">
-								<li><a href="#modalPopup" class="button style1" id="modalLink3">Launch</a></li>
+								<li><a href="#calculator" class="button style1">Launch</a></li>
 							</ul>
 						</section>
 					</div>
@@ -372,7 +373,74 @@
 		</div>
 		
 	<!-- Steaming END -->
-
+	
+	<!-- Crawfish Calculator BEGIN -->
+		
+		<div id="craw-calc" class="wrapper style2">
+			<div class="title" id="calculator">Calculator</div>
+				<div class="container">
+					<article class="box post">
+						
+						<header class="style1">
+							<h2>Crawfish Calculator</h2>
+						</header>
+						
+					
+						<section class="calc-container">	
+							
+							<div class="calc-input-area">
+								<div class="calc-input-area1">
+									<label>Men:</label>
+									<input type="text" class="numbersOnly" name="number-men" id="nummen" value="" />
+								</div>
+				
+								<div class="calc-input-area2">
+									<label>Women:</label>
+									<input type="text" class="numbersOnly" name="number-other" id="numother" value="" /> 
+								</div>
+							</div>
+							
+							
+	  						<div class="calc-output-area">
+  								
+								<div class="col-1">
+									<ul>
+										<li>Total:</li>
+										<li>Crawfish:</li>
+										<li>Sausage:</li>
+										<li>Potatos:</li>
+										<li>Corn:</li>
+										<li>Mushrooms:</li>
+									</ul>
+								</div>	
+								
+								<div class="col-2">
+									<ul>
+										<li><input type="text" name="total-people" id="totalPeople" /></li> 
+										<li><input type="text" name="tota-craw" id="totalCraw" /></li> 
+										<li><input type="text" name="total-sausage" id="totalSausage" /></li> 
+										<li><input type="text" name="total-pot" id="totalPot" /></li>
+										<li><input type="text" name="total-corn" id="totalCorn" /></li>
+										<li><input type="text" name="total-mush" id="totalMush" /></li> 
+									</ul>
+								</div>
+								
+								<div class="col-3">
+									<ul>
+										<li><span>people</span></li>
+										<li><span>lbs</span></li>
+										<li><span>lbs</span></li>
+										<li><span>ea</span></li>
+										<li><span>ea</span></li>
+										<li><span>oz</span></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+ 					</article>
+				</div>
+		</div>
+		
 	<!-- Equipment BEGIN-->
 <!-- 	
 		<section id="equip" class="wrapper style2">
@@ -441,7 +509,7 @@
 
 	<!-- Lessons Learned BEGIN-->
 	
-		<div id="lesson" class="wrapper style2">
+		<div id="lesson" class="wrapper style3">
 			<div class="title" id="lessons">Lessons</div>
 				<div class="container">
 					<article class="box post">
@@ -589,75 +657,12 @@
 		</section>
 		
 	<!-- Footer END -->
-
-		<div class="modal-footer">
-			<div class="modal-center">
-  				<button id="btnClose">Close</button>
-			</div>
-		</div>
 		
 	<!-- Modal Calculator END -->
 	
 <!-- Page Wrapper END-->
 
 	</div>
-
-	<!-- Modal Calculator BEGIN -->
-  	<div id="modalPopup" class="modal">
-	   <!-- Modal content -->
-	    <div class="modal-content">
-	      
-			<div class="modal-header">
-		        <span class="close">&times;</span>
-				<h2>Crawfish Calculator</h2>
-			</div>
-	      
-			<div class="modal-body">
-		      	<table>
-			    	<tr>    
-			    		<td class="row-label"><label>Men:</label></td>
-			            <td class="row-input"><input name="nummen" id="nummen" type="number" /></td>
-			          </tr>
-	
-			          <tr>
-			            <td class="row-label"><label>Women/Children:</label></td>
-			            <td class="row-input"><input name="numother" id="numother" type="number" /></td>
-			          </tr>
-	
-			          <tr>
-			            <td class="row-label"><label>Crawfish: </label></td>
-			            <td class="row-total"><input name="totalCraw" id="totalCraw" type="text" /></td>
-			            <td class="row-units">lbs</td>
-			          </tr>
-	
-			          <tr>
-			            <td class="row-label"><label>Sausage: </label></td>
-			            <td class="row-total"><input name="totalSausage" id="totalSausage" type="text" /></td>
-			            <td class="row-units">lbs</td>
-			          </tr>
-	
-			          <tr>
-			            <td class="row-label"><label>Potatos: </label></td>
-			            <td class="row-total"><input name="totalPot" id="totalPot" type="text" /></td>
-			            <td class="row-units">lbs</td>
-			          </tr>
-	
-			          <tr>
-			            <td class="row-label"><label>Corn: </label></td>
-			            <td class="row-total"><input name="totalCorn" id="totalCorn" type="text" /></td>
-			            <td class="row-units">ea</td>
-			          </tr>
-	
-			          <tr>
-			            <td class="row-label"><label>Mushrooms: </label></td>
-			            <td class="row-total"><input name="totalMush" id="totalMush" type="text" /></td>
-			            <td class="row-units">oz</td>
-			          </tr>
-				</table>
-			</div> <!-- Modal Body -->
-		</div> <!-- Modal Content -->
-	</div> <!-- Modal Calculator -->
-
 
 <!-- JavaScript BEGIN -->	
 

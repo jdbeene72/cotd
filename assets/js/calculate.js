@@ -1,68 +1,24 @@
-$(function(){
-      $(document).ready(function() {
-          $(".modal-input").keyup(function(){
-              men = $("#myModal #nummen").val();
-              menCraw = men * 4;
-              other = $("#myModal #numother").val();
-              otherCraw = other * 2;
-              totalPeople = Number(men) + Number(other);
-              totalCraw = Number(menCraw) + Number(otherCraw);
-              totalSausage = totalPeople * .33;
-              if (Math.round(totalSausage) < 1){totalSausage = 1;}
-              totalPot = totalPeople * 1;
-              totalCorn = totalPeople * 1;
-              totalMush = totalPeople * 2;
-              $("#myModal #totalCraw").val(totalCraw);
-              $("#myModal #totalSausage").val(Math.round(totalSausage));
-              $("#myModal #totalPot").val(totalPot);
-              $("#myModal #totalCorn").val(totalCorn);
-              $("#myModal #totalMush").val(totalMush);
-          });
-      });
+jQuery('.numbersOnly').keyup(function () { 
+    this.value = this.value.replace(/[^0-9\.]/g,''); //valideates number in field, null if false
+ 
+    var men = (parseInt(document.getElementById("nummen").value, 10) || 0);
+    var other = (parseInt(document.getElementById("numother").value, 10) || 0);
+    
+    totalPeople = Number(men) + Number(other);
+    menCraw = Number(men) * 4;
+    otherCraw = Number(other) * 2;
+    totalCraw = Number(menCraw) + Number(otherCraw);
+    totalCraw = menCraw + otherCraw;
+    totalSausage = totalPeople * .33;
+    if (Math.round(totalSausage) < 1){totalSausage = 1;}
+    totalPot = Number(totalPeople) * 1;
+    totalCorn = Number(totalPeople) * 1;
+    totalMush = Number(totalPeople) * 2;        
+    
+    document.getElementById("totalPeople").value=totalPeople;
+    document.getElementById("totalCraw").value=totalCraw;
+    document.getElementById("totalSausage").value=Math.round(totalSausage);
+    document.getElementById("totalPot").value=totalPot;
+    document.getElementById("totalCorn").value=totalCorn;
+    document.getElementById("totalMush").value=totalMush;
 });
-
-// Get the modal
-var modal = document.getElementById("modalPopup");
-
-// Get the buttons/links that open the modal
-var modalLink1 = document.getElementById("modalLink1");
-
-var modalLink2 = document.getElementById("modalLink2");
-
-var modalLink3 = document.getElementById("modalLink3");
-
-// Get the button that closes the modal
-var btnClose = document.getElementById("btnClose");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-modalLink1.onclick = function() {
-  modal.style.display = "block";
-};
-
-modalLink2.onclick = function() {
-  modal.style.display = "block";
-};
-
-modalLink3.onclick = function() {
-  modal.style.display = "block";
-};
-
-// When the user clicks the button, hide the modal 
-btnClose.onclick = function() {
-  modal.style.display = "none";
-};
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-};
-
-// When the user clicks anywhere outside of the modal, close it
-//window.onclick = function(event) {
-//  if (event.target == modal) {
-//    modal.style.display = "none";
-//  }
-//};
