@@ -22,3 +22,14 @@ jQuery('.numbersOnly').keyup(function () {
     document.getElementById("totalCorn").value=totalCorn;
     document.getElementById("totalMush").value=totalMush;
 });
+
+function clearcalc() {
+    document.getElementById("nummen").value="";
+    document.getElementById("numother").value="";
+    document.getElementById("totalPeople").value="";
+    document.getElementById("totalCraw").value="";
+    document.getElementById("totalSausage").value="";
+    document.getElementById("totalPot").value="";
+    document.getElementById("totalCorn").value="";
+    document.getElementById("totalMush").value="";
+}

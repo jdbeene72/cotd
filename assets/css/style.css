@@ -3075,14 +3075,13 @@ margin-top: 4em;
 .calc-container {
     display: grid;
     max-width: 600px;
-    /*border: 3px dashed black;*/
     width: auto;
     margin: auto;
     font-size: 1.4em;
     font-weight: bold;
-    line-height: 1.8;
-    color: #32353B;
+    line-height: 1.75;
     justify-content: center;
+    resize: none;
 }
 
 .calc-container input {
@@ -3090,23 +3089,41 @@ margin-top: 4em;
     font-size: 1.1em;
     font-weight: bold;
     width: 75px;
-    color: #000;
 }
 
 .calc-input-area {
-    max-width: 600px;
-    /*border: dashed 3px blue;*/
+    width: 350px;
     display: flex;
     justify-content: space-between;
     padding-bottom: 20px;
 }
 
-.calc-output-area {
-    display: grid;
-    grid-template-columns: 165px 75px 75px; /*columns widths*/
-    /*border: solid 1px red;*/
-    padding-right: 70px;
+.calc-input-area input {
+    box-shadow: inset 0px 0px 1px 0px #A0A1A7;
+    border-radius: 0.35em;
 }
+
+.calc-output-area table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* nth-child(1) = the first td in each tr */
+.calc-output-area td:nth-child(1) {
+    width: 40%;
+    text-align: right;
+  }
+
+/* the second */
+.calc-output-area td:nth-child(2) {
+    text-align: center;
+    width: 20%;
+}
+
+/* the third */
+.calc-output-area td:nth-child(3) {
+    width: 40%;
+ }
 
 .calc-output-area ul {  
     padding: 0;
@@ -3120,20 +3137,56 @@ margin-top: 4em;
 .calc-output-area input {
     border: 0;
     background: #D9D9D9 url("../img/overlay.png");
+    color: #820200;
 }
 
-.col-1 {
-    text-align: right;
+.calc-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.calc-footer a {
+    height: 58px;
+    width: 184px;
+    text-align: center;
 }
 
 .custom-list ul {
     padding: 0;
     list-style-type: none;
-    padding-bottom: 3px;
-    max-width: 65%;
     font-size: 1.2em;
-    font-weight: bold;
-    line-height: 1.8;
-    color: #32353B;
+    font-weight: 500;
     padding-left: 30px;
+}
+
+.custom-list li {
+    padding-bottom: 15px;
+}
+
+.text-dark-grey {
+    color: #32353B;
+}
+
+.text-black {
+    color: #000;
+}
+
+.text-light-grey {
+    color: #D9D9D9;
+}
+
+.text-dark-orange {
+    color: #820200;
+}
+
+.text-light-orange {
+    color: #FB2F00;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-bright-yellow {
+    color: #FFE912;
 }
