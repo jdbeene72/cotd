@@ -1638,6 +1638,13 @@ form ::-moz-focus-inner {
     margin: 0 2em 2em 0;
 }
 
+.image.right {
+    float: right;
+    padding:3px;
+    border:1px solid #484D55;
+    margin: 0 2em 2em 2em;
+}
+
 .image.centered {
     display: block;
     margin: 0 0 2em 0;
@@ -3072,8 +3079,18 @@ margin-top: 4em;
 
 }
 
-.process-list {
-    
+.convert-link a:link,
+.convert-link a:visited {
+    text-decoration: none;
+    transition:.5s;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.convert-link a:hover, 
+.convert-link a:active {
+    color: #FB2F00;
+    transition:.5s;
 }
 
 .process-list h3 {
